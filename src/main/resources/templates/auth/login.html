@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:include="fragments/head"></div>
+    <title>Login</title>
+</head>
+<body>
+
+<div class="border border-light p-3 mb-4">
+
+    <div class="d-flex align-items-center justify-content-center" style="height: 350px">
+        <div class="container ">
+            <div class="row justify-content-center">
+                <div class="col-md-9 offset-md-3">
+                    <h1>Google Calendar Application</h1>
+                </div>
+                <div class="col-md-6 offset-md-3">
+                    <h3>Login With</h3>
+                </div>
+                <div class="col-md-6 offset-md-3">
+                    <p th:each="url : ${urls}">
+                        <a class="btn btn-success" th:text="${url.key}" th:href="${url.value}">Client</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div th:include="fragments/foot"></div>
+</body>
+</html>

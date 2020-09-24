@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:include="fragments/head"></div>
+    <title>My Agendas</title>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="row col-sm-12">
+
+        <h2>Your Agenda's</h2><hr/>
+
+        <table class="table table-striped table-bordered table-dark table-hover">
+            <thead>
+            <tr>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="e: ${events}">
+                <td th:text="${e.getStart()}"></td>
+                <td th:text="${e.getEnd()}"></td>
+                <td th:text="${e.getDescription()}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+</div>
+
+<div th:include="fragments/foot"></div>
+</body>
+</html>
