@@ -6,7 +6,7 @@ package com.google.calendar.app.utils;
  */
 public class Constants {
 
-    public static final String APPLICATION_NAME = "GoCalApp";
+    public static final String APPLICATION_NAME = "GoCalApp1";
 
     public static final String MESSAGE = "message";
     public static final String EVENTS = "events";
